@@ -4,8 +4,8 @@ from datetime import datetime, timedelta
 
 default_args = {
     'owner': 'datamasterylab.com',
-    'start_date': datetime(2024, 7, 31),
-    'catchup': True
+    'start_date': datetime(2024, 8, 5),
+    'catchup': False
 }
 
 dag = DAG(
