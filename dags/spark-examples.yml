@@ -4,12 +4,11 @@ metadata:
  name: spark-pi
  namespace: spark-jobs
 spec:
- type: Scala
+ type: Python
  mode: cluster
  image: "apache/spark:3.5.1"
  imagePullPolicy: Always
- mainClass: org.apache.spark.examples.SparkPi
- mainApplicationFile: "local:///opt/spark/examples/jars/spark-examples_2.12-3.5.1.jar"
+ mainApplicationFile: "local:///opt/spark/examples/src/main/python/pi.py"
  sparkVersion: "3.5.1"
  restartPolicy:
    type: Never
@@ -30,7 +29,7 @@ spec:
        mountPath: "/tmp"
  executor:
    cores: 1
-   instances: 3
+   instances: 2
    memory: "512m"
    labels:
      version: 3.5.1
