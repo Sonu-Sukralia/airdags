@@ -1,0 +1,13 @@
+fernetKey: ckl4NjNjQnRQdzVYTVVuUnRSVkhhZGhlcTBPNURaeDc=
+webserverSecretKey: ckl4NjNjQnRQdzVYTVVuUnRSVkhhZGhlcTBPNURaeDc=
+executor: "KubernetesExecutor"
+
+dags:
+  gitSync:
+    enabled: true
+    repo: https://github.com/Sonu-Sukralia/airdags.git
+    branch: main
+    rev: HEAD
+    depth: 1
+    maxFailures: 0
+    subPath: "dags"
